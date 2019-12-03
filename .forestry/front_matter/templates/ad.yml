@@ -3,8 +3,62 @@ label: Ad
 hide_body: false
 fields:
 - type: text
-  name: title
-  label: title
+  name: company
+  label: company
+  description: The company that ran the ad
+  config:
+    required: true
 - type: datetime
-  name: date
-  label: date
+  name: create_date
+  label: create date
+  description: The date this ad was created in the system
+  config:
+    required: true
+  default: now
+- name: first_observed_date
+  type: datetime
+  description: The date the ad was first observed
+  config:
+    required: true
+    date_format: 
+    time_format: 
+    display_utc: false
+  label: first observed date
+  default: now
+- name: media
+  type: image_gallery
+  config: {}
+  label: media
+  description: The media (usually photos) of the ad itself
+- name: subway_line
+  type: select
+  default: ''
+  config:
+    required: false
+    options:
+    - '1'
+    - '2'
+    - '3'
+    - A
+    - C
+    - E
+    - '4'
+    - '5'
+    - '6'
+    - B
+    - D
+    - F
+    - Q
+    - R
+    - N
+    - W
+    - L
+    - M
+    - S
+    source:
+      type: simple
+      section: 
+      file: 
+      path: 
+  label: subway line
+  description: Which subway line this was first seen on
