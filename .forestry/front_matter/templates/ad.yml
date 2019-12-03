@@ -62,3 +62,5 @@ fields:
       path: 
   label: subway line
   description: Which subway line this was first seen on
+pages:
+- src/ads/casper1.md
